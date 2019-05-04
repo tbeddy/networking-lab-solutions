@@ -1,3 +1,9 @@
+"""
+Lab 1: UDP Pinger Lab
+
+This server was included with the assignment and was not written by me.
+"""
+
 # We will need the following module to generate randomized lost packets
 import random
 from socket import *

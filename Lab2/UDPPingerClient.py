@@ -1,3 +1,10 @@
+"""
+Lab 1: UDP Pinger Lab
+
+This client sends ten pings to the included server.
+The Round Trip Time is calculated for each ping.
+"""
+
 from socket import *
 import argparse
 import time
@@ -17,7 +24,7 @@ if __name__ == "__main__":
         message = "Ping {} {}".format(i, originalTime)
         clientSocket.sendto(message.encode(), (args.server_host, serverPort))
         try:
-            modifiedMessage, serverAddress = clientSocket.recvfrom(2048)
+            modifiedMessage, serverAddress = clientSocket.recvfrom(1024)
             print(modifiedMessage.decode())
             print("Round Trip Time (RTT): {}".format(time.time() - originalTime))
         except timeout:
